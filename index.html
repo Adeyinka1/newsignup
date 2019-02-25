@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Signup Page</title>
+
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    <form data-validate>
+        <div class="container">
+            <h1>Sign Up</h1>
+            <p>Please fill in your details correctly</p>
+
+            <label for="email" pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$"><b>Email</b></label><br/>
+            <input type="email" placeholder="Enter Email" name="email" required>
+            <br/>
+
+            <label for="psw"><b>Password(must contain at least 1 uppercase character, 1 lowercase character, and 1 number)</b></label><br/>
+            <input type="password" minlength="4" maxlength="8" placeholder="Enter Password" name="psw" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number." required>
+            <br/>
+
+            <label for="ZIP-code"><b>ZIP-code</b></label><br/>
+            <input type="number" placeholder="Enter ZIP code" name="ZIP-code" required>
+            <br/>
+
+            <label for="age" minlength="18"><b>Age (User must be 18 years or above)</b></label><br/>
+            <input type="number" placeholder="Enter your DOB, 18+ please" name="age" required>
+            <br/>
+
+            <input type="radio" id="Radio" name="customRadio" required>
+            <label for="Radio">Male</label><br/>
+
+            <input type="checkbox" id="Check" required>
+            <label for="Check">Check this box</label>
+            
+            <button type="submit" class="button" value="Submit">Submit</button>
+        </div>
+    </form>
+
+    <script src="index.js">
+        validate.init();
+    </script>
+</body>
+</html>
